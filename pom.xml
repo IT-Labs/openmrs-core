@@ -1123,17 +1123,17 @@
 
 	<repositories>
 		<repository>
-			<id>openmrs-repo</id>
-			<name>OpenMRS Nexus Repository</name>
-			<url>https://mavenrepo.openmrs.org/nexus/content/repositories/public</url>
+			<id>wellcare-360-be</id>
+            <name>Wellcare 360 private repository for third-party dependencies</name>
+            <url>https://pkgs.dev.azure.com/ITLabs-LLC/a1642ee2-0f3c-43d0-895d-b56dea474125/_packaging/wellcare-360-be/maven/v1</url>
 		</repository>
 	</repositories>
 
 	<pluginRepositories>
 		<pluginRepository>
-			<id>openmrs-repo</id>
-			<name>OpenMRS Nexus Repository</name>
-			<url>https://mavenrepo.openmrs.org/nexus/content/repositories/public</url>
+			<id>wellcare-360-be</id>
+            <name>Wellcare 360 private repository for third-party dependencies</name>
+            <url>https://pkgs.dev.azure.com/ITLabs-LLC/a1642ee2-0f3c-43d0-895d-b56dea474125/_packaging/wellcare-360-be/maven/v1</url>
 			<snapshots>
 				<enabled>false</enabled>
 			</snapshots>
@@ -1142,15 +1142,16 @@
 
 	<distributionManagement>
 		<repository>
-			<id>openmrs-repo-releases</id>
-			<name>OpenMRS Nexus Releases</name>
-			<url>https://mavenrepo.openmrs.org/nexus/content/repositories/releases</url>
+			<id>wellcare-360-be-itl</id>
+            <name>Wellcare 360 private repository for project builds</name>
+            <url>https://pkgs.dev.azure.com/ITLabs-LLC/a1642ee2-0f3c-43d0-895d-b56dea474125/_packaging/wellcare-360-be-itl/maven/v1</url>
+            <releases>
+            	<enabled>true</enabled>
+            </releases>
+            <snapshots>
+            	<enabled>true</enabled>
+            </snapshots>
 		</repository>
-		<snapshotRepository>
-			<id>openmrs-repo-snapshots</id>
-			<name>OpenMRS Nexus Snapshots</name>
-			<url>https://mavenrepo.openmrs.org/nexus/content/repositories/snapshots</url>
-		</snapshotRepository>
 	</distributionManagement>
 
 	<properties>

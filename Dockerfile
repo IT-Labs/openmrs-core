@@ -22,6 +22,11 @@ COPY docker-pom.xml .
 
 ARG MVN_SETTINGS="-s /usr/share/maven/ref/settings-docker.xml"
 
+ARG FEED_ACCESS_TOKEN=''
+COPY settings-docker.xml /usr/share/maven/ref/
+# replace the placeholder for the token with the actual token in settings-docker.xml
+RUN sed -i 's/${ACCESS_TOKEN}/'"$FEED_ACCESS_TOKEN"'/g' /usr/share/maven/ref/settings-docker.xml
+
 # Setup and cache SDK
 RUN mvn $MVN_SETTINGS -f docker-pom.xml $OMRS_SDK_PLUGIN:$OMRS_SDK_PLUGIN_VERSION:setup-sdk -N -DbatchAnswers=n
 
