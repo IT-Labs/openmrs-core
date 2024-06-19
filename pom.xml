@@ -15,7 +15,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.openmrs</groupId>
 	<artifactId>openmrs</artifactId>
-	<version>2.6.5-SNAPSHOT</version>
+	<version>2.6.6-ITL</version>
 	<packaging>pom</packaging>
 	<name>OpenMRS</name>
 	<description>Master project for the modules of OpenMRS</description>
@@ -1142,16 +1142,15 @@
 
 	<distributionManagement>
 		<repository>
-			<id>wellcare-360-be-itl</id>
-            <name>Wellcare 360 private repository for project builds</name>
-            <url>https://pkgs.dev.azure.com/ITLabs-LLC/a1642ee2-0f3c-43d0-895d-b56dea474125/_packaging/wellcare-360-be-itl/maven/v1</url>
-            <releases>
-            	<enabled>true</enabled>
-            </releases>
-            <snapshots>
-            	<enabled>true</enabled>
-            </snapshots>
+			<id>wellcare-360-be</id>
+			<name>ITL Repository</name>
+			<url>https://pkgs.dev.azure.com/ITLabs-LLC/a1642ee2-0f3c-43d0-895d-b56dea474125/_packaging/wellcare-360-be/maven/v1</url>
 		</repository>
+		<snapshotRepository>
+			<id>wellcare-360-be</id>
+			<name>ITL Repository</name>
+			<url>https://pkgs.dev.azure.com/ITLabs-LLC/a1642ee2-0f3c-43d0-895d-b56dea474125/_packaging/wellcare-360-be/maven/v1</url>
+		</snapshotRepository>
 	</distributionManagement>
 
 	<properties>
